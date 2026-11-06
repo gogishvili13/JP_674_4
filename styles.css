@@ -98,13 +98,4 @@
     color: rgb(30, 81, 114);
   }
 }
-h1 {
-  font-size: 100px;
-  color: rgb(30, 81, 114);
-  position: fixed;
-  top: 600px;
-  text-align: center;
-  z-index: 10;
-  width: 100%;
-  animation: fade 3s 1s ease-in-out 1;
-}
+
