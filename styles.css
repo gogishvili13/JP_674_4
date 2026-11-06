@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 50px;
+  background-color: burlywood;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.box1 {
+  transition: 0.9s ease-in-out;
+}
+
+.box1:hover {
+  transform: translate(15px, 20px) rotate(360deg) scale(0.9);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    background-color: cadetblue;
+    color: green;
+  }
+  to {
+    transform: rotate(360deg);
+    background-color: brown;
+    color: blue;
+  }
+}
+
+.box2 {
+  border-radius: 50%;
+  border: 10px solid red;
+  border-top-color: blue;
+  /* animation: name duration timing-function delay iteration-count direction  */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    background-color: brown;
+    color: aqua;
+    transform: scale(1) translate(10px, 10px) rotate(0deg);
+    width: 200px;
+  }
+  50% {
+    opacity: 0.7;
+    background-color: cornflowerblue;
+    color: green;
+    transform: scale(0.7) translate(10px, -10px) rotate(360deg);
+    border: 10px solid black;
+    width: 300px;
+  }
+  100% {
+    opacity: 1;
+    background-color: brown;
+    color: aqua;
+    transform: scale(1) translate(-10px, 10px) rotate(0deg);
+    width: 200px;
+  }
+}
+
+.box3 {
+  animation: pulse 3s 2s infinite ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    top: -100px;
+    font-size: 20px;
+    color: red;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    top: 600px;
+    font-size: 100px;
+    color: rgb(30, 81, 114);
+  }
+}
+h1 {
+  font-size: 100px;
+  color: rgb(30, 81, 114);
+  position: fixed;
+  top: 600px;
+  text-align: center;
+  z-index: 10;
+  width: 100%;
+  animation: fade 3s 1s ease-in-out 1;
+}
